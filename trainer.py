@@ -37,7 +37,7 @@ dataset = generator.flow_from_directory(
     TRAINING_DIR,
     target_size=(IMAGE_SIZE, IMAGE_SIZE),
     batch_size=BATCH_SIZE,
-    class_mode='categorical'
+    class_mode='binary'
 )
 
 # Define number of classes

@@ -48,9 +48,9 @@ def main():
     for root, dirs, files in os.walk(TESTING_DIR):
         for file in files:
             image_path = os.path.join(root, file)
-            predicted_class = predict_class(image_path, model)
-            if predicted_class is not None:
-                results.append(f" - {image_path} -> {predicted_class}")
+            prediction = predict_class(image_path, model)
+            if prediction is not None:
+                results.append(f"\n{image_path}\n-> {prediction}")
     
     print("\n[Results]")
     for result in results:
